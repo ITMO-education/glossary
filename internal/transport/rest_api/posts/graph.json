@@ -1,120 +1,95 @@
 {
   "nodes": {
-    "blockchain": {
-      "name": "Блокчейн"
+    "blockchain":{
+      "name": "blockchain"
     },
-    "decentralization": {
-      "name": "Децентрализация"
+    "HashSum": {
+      "name": "Хэш сумма"
     },
-    "daap": {
-      "name": "DApp"
+    "HashFunc": {
+      "name": "Хэш функция"
     },
-    "p2p": {
-      "name": "P2P"
-    },
-    "ethereum_platform": {
-      "name": "Ethereum(platform)"
-    },
-    "transaction": {
-      "name": "Транзакция"
-    },
-    "coinbase": {
-      "name": "Coinbase"
-    },
-    "off-chain": {
-      "name": "Off-chain"
-    },
-    "cryptocurrency": {
-      "name": "Криптовалюты"
-    },
-    "ethereum":{
-      "name": "Эфириум (криптовалюта)"
-    },
-    "bitcoin": {
-      "name": "Биткоин"
-    },
-    "nonce": {
-      "name": "nonce"
-    },
-    "mining": {
+    "Mining": {
       "name": "Майнинг"
     },
-    "miners": {
-      "name": "Майнеры"
+    "Cryptocurrency": {
+      "name": "Криптовалюты"
     },
-    "asic": {
-      "name": "ASIC"
+    "PrivateKey": {
+      "name": "Закрытый ключ"
     },
-    "bip":{
-      "name": "BIP"
+    "PublicKey": {
+      "name": "Открытый ключ"
+    },
+    "SmartContract": {
+      "name": "Смарт контракт"
+    },
+    "EVM": {
+      "name": "evm"
+    },
+    "gas": {
+      "name": "gas"
+    },
+    "solidity": {
+      "name": "solidity"
+    },
+    "Ethereum": {
+      "name": "Ethereum"
     }
   },
   "edges": {
-    "decentralization": {
-      "source": "blockchain",
-      "target": "decentralization"
+    "HashSum": {
+      "source": "HashSum",
+      "target": "blockchain"
     },
-    "daap": {
-      "source": "decentralization",
-      "target": "daap"
+    "HashFunc": {
+      "source": "HashFunc",
+      "target": "HashSum"
     },
-    "p2p": {
-      "source": "decentralization",
-      "target": "p2p"
+    "SmartContract": {
+      "source": "SmartContract",
+      "target": "blockchain"
     },
-    "ethereum_platform": {
-      "source": "decentralization",
-      "target": "ethereum_platform"
+    "Evm": {
+      "source": "EVM",
+      "target": "SmartContract"
     },
-
-    "transaction": {
-      "source": "blockchain",
-      "target": "transaction"
+    "Gas": {
+      "source": "gas",
+      "target": "EVM"
     },
-    "coinbase": {
-      "source": "transaction",
-      "target": "coinbase"
+    "Solidity": {
+      "source": "solidity",
+      "target": "gas"
     },
-    "off-chain":{
-      "source": "transaction",
-      "target": "off-chain"
+    "Mining": {
+      "source": "Mining",
+      "target": "blockchain"
     },
-
-
-    "cryptocurrency": {
-      "source": "blockchain",
-      "target": "cryptocurrency"
+    "PublicKey": {
+      "source": "PublicKey",
+      "target": "Mining"
     },
-    "ethereum":  {
-      "source": "cryptocurrency",
-      "target": "ethereum"
+    "PrivateKey": {
+      "source": "PrivateKey",
+      "target": "Mining"
     },
-    "bitcoin": {
-      "source": "cryptocurrency",
-      "target": "bitcoin"
+    "Cryptocurrency": {
+      "source": "Cryptocurrency",
+      "target": "Mining"
     },
-    "nonce": {
-      "source": "bitcoin",
-      "target": "nonce"
+    "Ethereum1": {
+      "source": "Ethereum",
+      "target": "Mining"
     },
-
-    "mining": {
-      "source": "blockchain",
-      "target": "mining"
+    "Ethereum2": {
+      "source": "Ethereum",
+      "target": "Cryptocurrency"
     },
-    "miners": {
-      "source": "mining",
-      "target": "miners"
-    },
-    "asic": {
-      "source": "mining",
-      "target": "asic"
-    },
-    "bip": {
-      "source": "mining",
-      "target": "bip"
+    "Ethereum3": {
+      "source": "Ethereum",
+      "target": "SmartContract"
     }
-
   },
   "layouts": {
     "nodes": {
@@ -122,67 +97,48 @@
         "x": 0,
         "y": 0
       },
-      "decentralization": {
+      "HashSum": {
         "x": 0,
         "y": -100
       },
-      "daap": {
-        "x": -100,
-        "y": -200
-      },
-      "p2p": {
+      "HashFunc": {
         "x": 0,
         "y": -200
       },
-      "ethereum_platform": {
-        "x": 100,
-        "y": -200
-      },
-      "transaction": {
-        "x": 100,
+      "Mining": {
+        "x": -100,
         "y": 0
       },
-      "coinbase": {
-        "x": 200,
-        "y": 100
+      "Cryptocurrency": {
+        "x": -200,
+        "y": 0
       },
-      "off-chain": {
-        "x": 200,
+      "PrivateKey": {
+        "x": -200,
         "y": -100
       },
-
-      "cryptocurrency": {
+      "PublicKey": {
+        "x": -100,
+        "y": -100
+      },
+      "SmartContract": {
         "x": 0,
         "y": 100
       },
-      "ethereum": {
-        "x": -100,
+      "EVM": {
+        "x": 0,
         "y": 200
       },
-      "bitcoin":{
+      "gas": {
         "x": 100,
         "y": 200
       },
-      "nonce": {
-        "x": 200,
-        "y": 200
+      "solidity": {
+        "x": 100,
+        "y": 100
       },
-
-
-      "mining": {
+      "Ethereum":{
         "x": -100,
-        "y": 0
-      },
-      "miners": {
-        "x": -200,
-        "y": -100
-      },
-      "asic": {
-        "x": -200,
-        "y": 0
-      },
-      "bip":  {
-        "x": -200,
         "y": 100
       }
     }

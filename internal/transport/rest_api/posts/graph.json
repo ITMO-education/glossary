@@ -1,13 +1,13 @@
 {
   "nodes": {
     "blockchain":{
-      "name": "blockchain"
+      "name": "Blockchain"
     },
     "HashSum": {
-      "name": "Хэш сумма"
+      "name": "Хэш-сумма"
     },
     "HashFunc": {
-      "name": "Хэш функция"
+      "name": "Хэш-функция"
     },
     "Mining": {
       "name": "Майнинг"
@@ -22,19 +22,28 @@
       "name": "Открытый ключ"
     },
     "SmartContract": {
-      "name": "Смарт контракт"
+      "name": "Смарт-контракт"
     },
     "EVM": {
-      "name": "evm"
+      "name": "EVM"
     },
     "gas": {
-      "name": "gas"
+      "name": "Gas"
     },
     "solidity": {
-      "name": "solidity"
+      "name": "Solidity"
     },
     "Ethereum": {
       "name": "Ethereum"
+    },
+    "Transaction": {
+      "name": "Транзакция"
+    },
+    "Gwei": {
+      "name": "Gwei"
+    },
+    "Whitepaper": {
+      "name": "Whitepaper"
     }
   },
   "edges": {
@@ -89,6 +98,34 @@
     "Ethereum3": {
       "source": "Ethereum",
       "target": "SmartContract"
+    },
+    "Транзакция": {
+      "source": "blockchain",
+      "target": "Transaction"
+    },
+    "Транзакция2": {
+      "source": "SmartContract",
+      "target": "Transaction"
+    },
+    "Транзакция3": {
+      "source": "HashSum",
+      "target": "Transaction"
+    },
+    "Gwei": {
+      "source": "Transaction",
+      "target": "Gwei"
+    },
+    "Gwei2": {
+      "source": "gas",
+      "target": "Gwei"
+    },
+    "Whitepaper": {
+      "source": "Transaction",
+      "target": "Whitepaper"
+    },
+    "Whitepaper2": {
+      "source": "SmartContract",
+      "target": "Whitepaper"
     }
   },
   "layouts": {
@@ -135,10 +172,22 @@
       },
       "solidity": {
         "x": 100,
-        "y": 100
+        "y": 300
       },
       "Ethereum":{
         "x": -100,
+        "y": 100
+      },
+      "Transaction": {
+        "x": 100,
+        "y": 0
+      },
+      "Gwei": {
+        "x": 200,
+        "y": 0
+      },
+      "Whitepaper": {
+        "x": 100,
         "y": 100
       }
     }
